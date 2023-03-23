@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Vendor Registration",
+    "image": "./images/vera.png"
+  },
+  {
+    "title": "Business Travel Request",
+    "image": "./images/btr.png"
+  },
+  {
+    "title": "ITM Plaza",
+    "image": "./images/portal.png"
+  },
+  {
+    "title": "Travel Authorization",
+    "image": "./images/ta.png"
+  },
+  {
+    "title": "Treasury Management",
+    "image": "./images/treasury.png"
+  },
+  {
+    "title": "Dhammasukha Indonesia",
+    "image": "./images/dsi.png"
+  }
+]

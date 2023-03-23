@@ -1,0 +1,142 @@
+---
+import { Picture } from "@astrojs/image/components";
+import programmer from "~/assets/programmer.png";
+import HeroImage from "~/components/hero-image.astro";
+import Matrix from "~/components/matrix.astro";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+
+<section class="relative h-full bg-black">
+  <Matrix />
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+    <HeroImage />
+  </div>
+  <div class="relative grid h-full place-items-center sm:grid-cols-2">
+    <h2
+      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <div
+        class="text-white text-center font-medium tracking-tighter text-4xl font-mono"
+      >
+        Hello, <span class="type" style="--n:50">my name is
+        Hedi Senior Fullstack Developer</span> 
+      </div>
+    </h2>
+    <div
+      id="programmer"
+      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+    >
+      <Picture
+        class="object-cover w-full h-full"
+        src={programmer}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="Super Programmer"
+      />
+    </div>
+  </div>
+  <div class="hidden md:block">
+    <a href="#summary" class="scroll-down z-100"></a>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  #programmer {
+    animation: float linear 2.5s infinite alternate;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    #programmer {
+      @apply animate-none;
+    }
+
+    :global(#starfield) {
+      @apply hidden;
+    }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
+  .type {
+    color:#0000;
+    background:
+      linear-gradient(-90deg,#fff 5px,#0000 0) 10px 0,
+      linear-gradient(#fff 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.15s) steps(var(--n)) forwards;
+  }
+
+  @keyframes t{
+    from {background-size:0 200%}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0}
+  }
+
+  .scroll-down {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 300;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 13px;
+    height: 13px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation:    fade_move_down 4s ease-in-out infinite;
+    animation:         fade_move_down 4s ease-in-out infinite;
+  }
+
+  @-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+import SkillList from "~/components/skill-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { SkillItem } from "~/types";
+
+const skills: Array<SkillItem> = [
+  {
+    title: "Javascript",
+    icon: "teenyicons:javascript-outline",
+  },
+  {
+    title: "Typescript",
+    icon: "teenyicons:typescript-outline",
+  },
+  {
+    title: "TailwindCSS",
+    icon: "teenyicons:tailwind-outline",
+  },  
+  {
+    title:"Boostrap",
+    icon:"bi:bootstrap"
+  },
+  {
+    title: "React",
+    icon: "frameworks/react",
+  },
+  {
+    title: "React Native",
+    icon: "frameworks/react",
+  },
+  {
+    title: "Expo",
+    icon: "simple-icons:expo",
+  },
+  {
+    title: "Fastify",
+    icon: "simple-icons:fastify",
+  },
+  {
+    title: "ExpressJS",
+    icon: "simple-icons:express",
+  },
+  {
+    title: "NextJS",
+    icon: "teenyicons:nextjs-outline",
+  },
+  {
+    title: "NestJS",
+    icon: "simple-icons:nestjs",
+  },
+  {
+    title: "Prisma",
+    icon: "simple-icons:prisma",
+  },
+  {
+    title: "PostgreSQL",
+    icon: "simple-icons:postgresql",
+  },
+  {
+    title: "MySQL",
+    icon: "fontisto:mysql",
+  },
+  {
+    title: "MongoDB",
+    icon: "teenyicons:mongodb-outline",
+  },
+  {
+    title: "Webpack",
+    icon: "teenyicons:webpack-outline",
+  },
+  {
+    title: "Vite",
+    icon: "file-icons:vite",
+  },
+  {
+    title: "XPages",
+    icon: "fa-brands:java",
+  },
+];
+
+---
+
+<ContentSection title="Skill" id="skill" paragraphClass={"hidden"}>
+  <SkillList
+    items={skills}
+  />
+</ContentSection>
