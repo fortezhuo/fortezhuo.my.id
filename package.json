@@ -1,8 +1,10 @@
 {
   "name": "fortezhuo",
+  "description": "My Personal Landing Page",
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://fortezhuo.my.id/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
