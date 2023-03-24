@@ -1,7 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import programmer from "~/assets/programmer.png";
-import HeroImage from "~/components/hero-image.astro";
 import Matrix from "~/components/matrix.astro";
 
 const widths = [450, 800];
@@ -10,9 +9,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 
 <section class="relative h-full bg-black">
   <Matrix />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
   <div class="relative grid h-full place-items-center sm:grid-cols-2">
     <h2
       class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
@@ -20,8 +16,8 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       <div
         class="text-white text-center font-medium tracking-tighter text-4xl font-mono"
       >
-        Hello, <span class="type" style="--n:50">my name is
-        Hedi Senior Fullstack Developer</span> 
+        Hello, <span class="type" style="--n:50">my name is<br/>
+        Hedi Kasmanto<br/>Senior Full Stack Developer</span> 
       </div>
     </h2>
     <div
