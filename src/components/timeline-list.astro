@@ -11,7 +11,7 @@ const { items} = Astro.props;
     <div class="w-full px-2 sm:px-0">  
       <div class="relative antialiased text-sm">  
         <!-- Vertical bar running through middle -->
-        <div class="hidden sm:block w-1 bg-sky-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+        <div class="hidden sm:block w-1 bg-offset absolute h-full left-1/2 transform -translate-x-1/2"></div>
         {
             items.map((item, n) => {
                 const paddingClass = `w-full sm:w-1/2 ${n % 2 === 0 ? "sm:pr-8" : "sm:pl-8"}`                
@@ -22,7 +22,7 @@ const { items} = Astro.props;
                     <div class={justifyClass}>
                     <div class={paddingClass}>
                         <div class="p-4 bg-offset rounded-xl flex flex-col">
-                            <span class="text-blue-500 font-bold">{item.position}</span>
+                            <span class="text-primary font-bold">{item.position}</span>
                             <span class="text-xs">{item.company}</span>
                             <span class="text-xs">{item.range}</span>
                             <br/>
@@ -34,8 +34,8 @@ const { items} = Astro.props;
                         </div>
                     </div>
                     </div>
-                    <div class="rounded-full bg-indigo-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="rounded-full bg-offset border-default border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-default" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                      </svg>
                     </div>
