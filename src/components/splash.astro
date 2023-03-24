@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import programmer from "~/assets/programmer.png";
+import avatar from "~/assets/avatar.png";
 import Matrix from "~/components/matrix.astro";
 
 const widths = [450, 800];
@@ -26,7 +26,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     >
       <Picture
         class="object-cover w-full h-full"
-        src={programmer}
+        src={avatar}
         widths={widths}
         sizes={sizes}
         loading="eager"
