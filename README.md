@@ -1,7 +1,6 @@
 # Forte Zhuo
 
-<img width="1265" alt="image" src="https://user-images.githubusercontent.com/9128724/227511301-b9221d2e-d8cc-4d9a-88f2-3de4102b6e1f.png">
-
+![image](https://user-images.githubusercontent.com/9128724/228556999-4c2a90d9-c8ea-4484-8194-8c13b1f6e322.png)
 ## Demo
 
 [My Resume Landing Page](https://fortezhuo.my.id)
