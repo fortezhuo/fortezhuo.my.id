@@ -1,4 +1,4 @@
-import type { ProjectSite } from "~/types";
+import type { GallerySite } from "~/types";
 import sitesData from "./sites.json";
 
 const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg}", {
@@ -6,9 +6,9 @@ const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg}", {
   import: "default",
 });
 
-let _loadProject: Promise<Array<ProjectSite>>;
+let _loadGallery: Promise<Array<GallerySite>>;
 
-async function loadProject(): Promise<Array<ProjectSite>> {
+async function loadGallery(): Promise<Array<GallerySite>> {
   const sites = await Promise.all(
     sitesData.map(async (site) => {
       if (!(site.image in allImages)) {
@@ -29,7 +29,7 @@ async function loadProject(): Promise<Array<ProjectSite>> {
   return sites;
 }
 
-export async function getProject() {
-  _loadProject = _loadProject || loadProject();
-  return _loadProject;
+export async function getGallery() {
+  _loadGallery = _loadGallery || loadGallery();
+  return _loadGallery;
 }

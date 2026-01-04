@@ -1,0 +1,34 @@
+---
+import ProjectList from "~/components/project-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { ProjectItem } from "~/types";
+
+const projects: Array<ProjectItem> = [{ 
+    position:"Vidya JS — Fullstack Framework", 
+    range:"2023",
+    description:[
+      "Designed and built a modern fullstack framework intended to replace HCL Domino–based enterprise applications",
+      "Defined end-to-end architecture, including SSR frontend, API layer, RBAC, email workflows, and data access",
+      "Built as a reusable internal platform to standardize development patterns and accelerate enterprise application delivery"
+  ]},{ 
+    position:"Forte Framework II — Frontend Modernization ", 
+    range:"2018",
+    description:[
+      "Created an early React-based framework to integrate modern frontend architecture with IBM Notes / Java backends",
+      "Designed a transitional architecture enabling gradual adoption of React without rewriting existing enterprise systems",
+      "Established frontend development standards and reusable patterns within legacy enterprise constraints",
+    ]},{ 
+    position:"Forte Framework — Enterprise UI Platform", 
+    range:"2015",
+    description:[
+      "Developed a reusable XPages UI framework using JSF components and Bootstrap to standardize enterprise application development",
+      "Reduced UI duplication and improved long-term maintainability across multiple internal projects",
+      "Served as a foundation for consistent UI and workflow implementation in enterprise systems"
+    ]}];
+---
+
+<ContentSection title="Projects" id="project" paragraphClass="hidden">
+  <ProjectList
+    items={projects}
+  />
+</ContentSection>

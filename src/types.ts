@@ -1,6 +1,5 @@
-export interface TimelineItem {
+export interface ProjectItem {
   position: string;
-  company: string;
   range: string;
   description: string[];
 }
@@ -21,7 +20,7 @@ export interface NavItem {
   url: string;
 }
 
-export interface ProjectSite {
+export interface GallerySite {
   title: string;
   image: ImageMetadata;
   url: string;

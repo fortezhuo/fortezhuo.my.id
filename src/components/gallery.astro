@@ -1,0 +1,15 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import GalleryCard from "~/components/gallery-card.astro";
+import { getGallery } from "~/data/gallery";
+
+const sites = await getGallery();
+---
+
+<ContentSection title="Galleries" id="gallery" paragraphClass={"hidden"}>
+  <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {sites.map((site) => <GalleryCard site={site} />)}
+    </div>
+  </div>
+</ContentSection>

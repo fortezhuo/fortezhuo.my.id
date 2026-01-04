@@ -3,10 +3,10 @@ import "@fontsource/inter/variable.css";
 import Skill from "~/components/skill.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Summary from "~/components/summary.astro";
-import Work from "~/components/work.astro";
+import About from "~/components/about.astro";
+import Gallery from "~/components/gallery.astro";
 import Splash from "~/components/splash.astro";
-import Timeline from "~/components/timeline.astro";
+import Project from "~/components/project.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -64,10 +64,10 @@ const description =
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
-      <Summary />
-      <Timeline/>
+      <About />
+      <Project/>
       <Skill />
-      <Work />
+      <Gallery />
     </div>
     <Footer />
   </body>

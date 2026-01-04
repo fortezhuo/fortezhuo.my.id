@@ -1,8 +1,8 @@
 ---
-import type { TimelineItem } from "~/types";
+import type { ProjectItem } from "~/types";
 
 export interface Props {
-  items: Array<TimelineItem>;
+  items: Array<ProjectItem>;
 }
 
 const { items} = Astro.props;
@@ -23,8 +23,6 @@ const { items} = Astro.props;
                     <div class={paddingClass}>
                         <div class="p-4 bg-offset rounded-xl flex flex-col">
                             <span class="text-primary font-bold">{item.position}</span>
-                            <span class="text-xs">{item.company}</span>
-                            <span class="text-xs">{item.range}</span>
                             <br/>
                             <ul class="font-light ml-4" style="list-style-type: square;">
                                 {item.description.map((desc)=>(
@@ -37,7 +35,8 @@ const { items} = Astro.props;
                     <div class="rounded-full bg-offset border-default border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-default" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                     </svg>
+                     </svg> 
+                     <span class="-mt-20">{item.range}</span>
                     </div>
                 </div>
             </div>
