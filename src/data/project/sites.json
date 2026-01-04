@@ -1,26 +1,42 @@
 [
   {
+    "title": "PICTO",
+    "image": "./images/picto.png",
+    "url": "https://fortecraft.github.io/picto/"
+  },
+  {
+    "title": "AISEO",
+    "image": "./images/aiseo.png",
+    "url": "https://fortecraft.github.io/aiseo/"
+  },
+  {
     "title": "Vendor Registration",
-    "image": "./images/vera.png"
+    "image": "./images/vera.png",
+    "url": "#"
   },
   {
     "title": "Business Travel Request",
-    "image": "./images/btr.png"
+    "image": "./images/btr.png",
+    "url": "#"
   },
   {
     "title": "ITM Plaza",
-    "image": "./images/portal.png"
+    "image": "./images/portal.png",
+    "url": "#"
   },
   {
     "title": "Travel Authorization",
-    "image": "./images/ta.png"
+    "image": "./images/ta.png",
+    "url": "#"
   },
   {
     "title": "Treasury Management",
-    "image": "./images/treasury.png"
+    "image": "./images/treasury.png",
+    "url": "#"
   },
   {
-    "title": "Dhammasukha Indonesia",
-    "image": "./images/dsi.png"
+    "title": "Invoice Online",
+    "image": "./images/ivone.png",
+    "url": "#"
   }
 ]

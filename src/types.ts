@@ -1,8 +1,8 @@
 export interface TimelineItem {
-  position: string
-  company: string
-  range: string
-  description: string[]
+  position: string;
+  company: string;
+  range: string;
+  description: string[];
 }
 
 export interface SkillItem {
@@ -24,4 +24,5 @@ export interface NavItem {
 export interface ProjectSite {
   title: string;
   image: ImageMetadata;
+  url: string;
 }

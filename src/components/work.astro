@@ -6,7 +6,7 @@ import { getProject } from "~/data/project";
 const sites = await getProject();
 ---
 
-<ContentSection title="Project" id="project" paragraphClass={"hidden"}>
+<ContentSection title="Selected Works" id="work" paragraphClass={"hidden"}>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {sites.map((site) => <ProjectCard site={site} />)}
